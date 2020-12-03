@@ -55,6 +55,9 @@
 		E7E6041A257888BC006BC917 /* TeamDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E60419257888BC006BC917 /* TeamDetailsTest.swift */; };
 		E7E604222578892A006BC917 /* TeamDetailsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E604212578892A006BC917 /* TeamDetailsMock.swift */; };
 		E7E6042825788F42006BC917 /* FavTeamsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6042725788F42006BC917 /* FavTeamsTest.swift */; };
+		E7E604332578BDC8006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.48.28.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E604302578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.48.28.png */; };
+		E7E604342578BDC8006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.44.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E604312578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.44.png */; };
+		E7E604352578BDC8006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.42.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E604322578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.42.png */; };
 		F77F699082E53409CDB2C69C /* Pods_Football_League_Football_LeagueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB9ECA084A37AF6A01CD0C2 /* Pods_Football_League_Football_LeagueUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +140,9 @@
 		E7E60419257888BC006BC917 /* TeamDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsTest.swift; sourceTree = "<group>"; };
 		E7E604212578892A006BC917 /* TeamDetailsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsMock.swift; sourceTree = "<group>"; };
 		E7E6042725788F42006BC917 /* FavTeamsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTeamsTest.swift; sourceTree = "<group>"; };
+		E7E604302578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.48.28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.48.28.png"; sourceTree = "<group>"; };
+		E7E604312578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.44.png"; sourceTree = "<group>"; };
+		E7E604322578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.42.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +273,7 @@
 		E79657882575ADD400EEB79A /* Football League */ = {
 			isa = PBXGroup;
 			children = (
+				E7E6042F2578BD90006BC917 /* images */,
 				E7011514257714B80077BF03 /* DataBase */,
 				E79657E32575AE6F00EEB79A /* Base */,
 				E79657CD2575AE6F00EEB79A /* Core */,
@@ -501,6 +508,16 @@
 			path = FavTeams;
 			sourceTree = "<group>";
 		};
+		E7E6042F2578BD90006BC917 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E7E604322578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.42.png */,
+				E7E604312578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.44.png */,
+				E7E604302578BDC7006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.48.28.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		F399606F1744F4270AF64B95 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,7 +644,10 @@
 				E796585A2576184100EEB79A /* LaunchScreen.storyboard in Resources */,
 				E79657932575ADD600EEB79A /* Assets.xcassets in Resources */,
 				E79657912575ADD400EEB79A /* Main.storyboard in Resources */,
+				E7E604342578BDC8006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.44.png in Resources */,
 				E796588D257641F000EEB79A /* TeamTCell.xib in Resources */,
+				E7E604352578BDC8006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.46.42.png in Resources */,
+				E7E604332578BDC8006BC917 /* Simulator Screen Shot - iPhone 11 Pro - 2020-12-03 at 07.48.28.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
