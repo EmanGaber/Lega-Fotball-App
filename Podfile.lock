@@ -1,0 +1,78 @@
+PODS:
+  - Alamofire (5.0.0-rc.2)
+  - CDAlertView (0.10.0)
+  - CocoaLumberjack (3.7.0):
+    - CocoaLumberjack/Core (= 3.7.0)
+  - CocoaLumberjack/Core (3.7.0)
+  - ImageSlideshow/Core (1.9.1)
+  - ImageSlideshow/Kingfisher (1.9.1):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - Presentr (1.9)
+  - Realm (10.1.2):
+    - Realm/Headers (= 10.1.2)
+  - Realm/Headers (10.1.2)
+  - RealmSwift (10.1.2):
+    - Realm (= 10.1.2)
+  - SCLAlertView (0.8)
+  - SVGKit (2.1.1):
+    - CocoaLumberjack (~> 3.0)
+  - SwiftyGif (5.3.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (= 5.0.0-rc.2)
+  - CDAlertView
+  - ImageSlideshow/Kingfisher
+  - IQKeyboardManagerSwift
+  - NVActivityIndicatorView
+  - Presentr
+  - RealmSwift
+  - SCLAlertView
+  - SVGKit
+  - SwiftyGif
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CDAlertView
+    - CocoaLumberjack
+    - ImageSlideshow
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - NVActivityIndicatorView
+    - Presentr
+    - Realm
+    - RealmSwift
+    - SCLAlertView
+    - SVGKit
+    - SwiftyGif
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  CDAlertView: ee6a87c90c4283c8d316d55633db1a6981f1cc51
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
+  ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  Presentr: 7078d7eb5d1661ebeaae60c9e42a1e534de1b993
+  Realm: 031fdd4be7094d01b43af1a5e49766ab644bb800
+  RealmSwift: 43cf2e114baa9d17d34eb81e7d0def31f21cd444
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SVGKit: 652cdf7bef8bec8564d04a8511d3ab50c7595fac
+  SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: b30ca6781cd55e64b4c7c8cafbf842baeec4d57f
+
+COCOAPODS: 1.10.0
