@@ -11,6 +11,7 @@ class TeamDetailsVC: BaseViewController {
     
     @IBOutlet weak var btnTryConnect: UIButton!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var teamDate: UILabel!
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var teamImg: UIImageView!

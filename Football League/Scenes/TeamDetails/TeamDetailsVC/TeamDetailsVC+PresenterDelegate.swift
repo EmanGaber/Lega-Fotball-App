@@ -42,7 +42,10 @@ extension TeamDetailsVC: TeamDetailsView {
         }
         
         lblName.text = presenter.teamsDetailsObj?.name
-        
+        guard let value = presenter.teamsDetailsObj?.founded! else {
+            return
+        }
+        teamDate.text = "\(value)"
         tableView.reloadData()
 
         tableViewHeight.constant = CGFloat((presenter.teamsDetailsObj?.squad!.count)! * 150)
