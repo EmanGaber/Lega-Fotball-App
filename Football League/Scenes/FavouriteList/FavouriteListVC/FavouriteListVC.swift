@@ -25,7 +25,7 @@ class FavouriteListVC: BaseViewController{
     }
  
     
-    @IBAction func BackAction(_ sender: Any) {
+    @IBAction func backaction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 }

@@ -18,7 +18,7 @@ class HomeVC: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         favArray.removeAll()
-        GetFavTeams()
+        getFavTeams()
     }
     
     override func viewDidLoad() {
@@ -29,13 +29,13 @@ class HomeVC: BaseViewController {
         
         if Reachability.isConnectedToNetwork(){
             btnTryConnect.isHidden = true
-            CallTeamsApi(competitionCode: compCode)
+            callTeamsApi(competitionCode: compCode)
         }
         else
         {
             
             // get saved data
-            presenter.teamsArray = TeamDB.GetAllTeams()
+            presenter.teamsArray = TeamDB.getAllTeams()
             if presenter.teamsArray?.count ?? 0 > 0 {
                 btnTryConnect.isHidden = true
                 tableView.isHidden = false
@@ -43,7 +43,7 @@ class HomeVC: BaseViewController {
             }else
             {
                 btnTryConnect.isHidden = false
-                ShowError(error: "Internet Connection Not Available!")
+                showError(error: "Internet Connection Not Available!")
                 
             }
             
@@ -53,18 +53,18 @@ class HomeVC: BaseViewController {
     }
     
     
-    func CallTeamsApi(competitionCode:String){
+    func callTeamsApi(competitionCode:String){
         //call api
         presenter.GetTeamsApi(competitionCode: competitionCode)
     }
     
     
-    @IBAction func TryConnect()
+    @IBAction func tryConnect()
     {
-        CallTeamsApi(competitionCode: compCode)
+        callTeamsApi(competitionCode: compCode)
     }
     
-    @IBAction func OpenFavListVC()
+    @IBAction func openFavListVC()
     {
         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "FavouriteListVC") as! FavouriteListVC
         

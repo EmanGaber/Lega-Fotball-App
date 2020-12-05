@@ -24,7 +24,7 @@ class FavTeamDB: Object {
         return "favTeamDB__id"
     }
     
-    class func GetAllTeams() -> [TeamModel]
+    class func getAllTeams() -> [TeamModel]
     {
         
         let realm = try! Realm()
@@ -65,7 +65,7 @@ class FavTeamDB: Object {
         
         return newObj
     }
-    class func AddOrUpdateTeamToFav(newObj : FavTeamDB)
+    class func addOrUpdateTeamToFav(newObj : FavTeamDB)
     {
         let realm = try! Realm()
         

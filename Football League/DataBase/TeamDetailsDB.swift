@@ -30,7 +30,7 @@ class TeamDetailsDB: Object {
         return "teamDetailsDB__id"
     }
     
-    class func GetTeamDetailsDB (teamID: Int) -> TeamDetailsDB?
+    class func getTeamDetailsDB (teamID: Int) -> TeamDetailsDB?
     {
 
         let realm = try! Realm()
@@ -49,7 +49,7 @@ class TeamDetailsDB: Object {
     }
     
     
-    class func GetTeamDetailsDBWithTeamDetailsObj(team: TeamDetailsModel) -> TeamDetailsDB {
+    class func getTeamDetailsDBWithTeamDetailsObj(team: TeamDetailsModel) -> TeamDetailsDB {
         
         let newObj = TeamDetailsDB()
         newObj.teamDetailsDB__id = team.id!
@@ -87,7 +87,7 @@ class TeamDetailsDB: Object {
         return newObj
     }
     
-    class func AddOrUpdateTeamDetails(newObj : TeamDetailsDB)
+    class func addOrUpdateTeamDetails(newObj : TeamDetailsDB)
     {
         let realm = try! Realm()
         

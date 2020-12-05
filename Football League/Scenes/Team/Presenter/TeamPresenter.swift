@@ -7,14 +7,13 @@
 //
 
 import Foundation
-
 protocol TeamView: class {
     
-    func ShowIndicator()
-    func HideIndicator()
-    func FetchingTeamsSuccess()
-    func ShowError(error: String)
-    func OpenTeamDetailsVc(teamId:Int)
+    func showIndicator()
+    func hideIndicator()
+    func fetchingTeamsSuccess()
+    func showError(error: String)
+    func openTeamDetailsVc(teamId:Int)
 }
 
 
@@ -36,23 +35,23 @@ class TeamPresenter {
     func GetTeamsApi(competitionCode:String) {
         
         if Reachability.isConnectedToNetwork(){
-        view?.ShowIndicator()
+        view?.showIndicator()
         interactor.GetTeamsApi(competitionCode:competitionCode) { [self] teamsDataModel, error in
             
-            self.view?.HideIndicator()
+            self.view?.hideIndicator()
             if let error = error {
-                self.view?.ShowError(error: error)
+                self.view?.showError(error: error)
             } else {
                 self.teamsArray = teamsDataModel?.teams
                 
-                self.view?.FetchingTeamsSuccess()
+                self.view?.fetchingTeamsSuccess()
                 
             }
         }
         }
         else
         {
-            self.view?.ShowError(error: "Internet Connection Not Available!")
+            self.view?.showError(error: "Internet Connection Not Available!")
             
         }
     }
@@ -63,7 +62,7 @@ class TeamPresenter {
             return
         }
         
-        view?.OpenTeamDetailsVc(teamId: teamId)
+        view?.openTeamDetailsVc(teamId: teamId)
         
     }
     

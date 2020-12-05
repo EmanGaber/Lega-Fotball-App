@@ -9,11 +9,10 @@
 import Foundation
 
 protocol TeamDetailsView: class {
-    
-    func ShowIndicator()
-    func HideIndicator()
-    func FetchingTeamDetailsSuccess()
-    func ShowError(error: String)
+    func showIndicator()
+    func hideIndicator()
+    func fetchingTeamDetailsSuccess()
+    func showError(error: String)
     
 }
 
@@ -31,23 +30,23 @@ class TeamDetailsPresenter {
     // MARK: Api
     func GetTeamDetailsApi(teamID:Int) {
         if Reachability.isConnectedToNetwork(){
-        view?.ShowIndicator()
+        view?.showIndicator()
         interactor.GetTeamDetailsApi( teamID:teamID) { [self] teamDetailsModel, error in
             
-            self.view?.HideIndicator()
+            self.view?.hideIndicator()
             if let error = error {
-                self.view?.ShowError(error: error)
+                self.view?.showError(error: error)
             } else {
                 self.teamsDetailsObj = teamDetailsModel
                 
-                self.view?.FetchingTeamDetailsSuccess()
+                self.view?.fetchingTeamDetailsSuccess()
                 
             }
         }
         }
     else
         {
-            self.view?.ShowError(error: "Internet Connection Not Available!")
+            self.view?.showError(error: "Internet Connection Not Available!")
            
         }
 

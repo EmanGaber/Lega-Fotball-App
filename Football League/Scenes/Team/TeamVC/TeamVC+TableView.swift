@@ -94,7 +94,7 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         {
             //add team to fav
             let newObj :FavTeamDB = FavTeamDB.GetFavTeamDBWithTeamObj(team: team)
-            FavTeamDB.AddOrUpdateTeamToFav(newObj: newObj)
+            FavTeamDB.addOrUpdateTeamToFav(newObj: newObj)
             favArray[sender.tag] = true
         }else
         {

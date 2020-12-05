@@ -27,7 +27,7 @@ class FavouriteListPresenter {
     func getFavTeamListDB()
     {
         // get saved data
-        teamsArray = FavTeamDB.GetAllTeams()
+        teamsArray = FavTeamDB.getAllTeams()
         view?.fetchingFavTeamsSuccess()
     }
     

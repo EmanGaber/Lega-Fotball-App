@@ -9,26 +9,26 @@ import UIKit
 extension HomeVC: TeamView {
     
     
-    func ShowIndicator() {
+    func showIndicator() {
         self.loading()
     }
     
-    func HideIndicator() {
+    func hideIndicator() {
         self.killLoading()
     }
     
-    func FetchingTeamsSuccess() {
-       
-        GetFavTeams()
-
+    func fetchingTeamsSuccess() {
+        
+        getFavTeams()
+        
         btnTryConnect.isHidden = true
         tableView.isHidden = false
-        SaveTeamsIDatabase()
+        saveTeamsIDatabase()
     }
-  
-    func GetFavTeams()
+    
+    func getFavTeams()
     {
-        let favTeamsDbArray = FavTeamDB.GetAllTeams()
+        let favTeamsDbArray = FavTeamDB.getAllTeams()
         if favTeamsDbArray.count > 0
         {
             var isFav = false
@@ -44,10 +44,10 @@ extension HomeVC: TeamView {
                     
                 }
                 favArray.append(isFav)
-
+                
             }
             
-
+            
         }else
         {
             for _ in presenter.teamsArray ?? []
@@ -59,21 +59,22 @@ extension HomeVC: TeamView {
         tableView.reloadData()
         
     }
-    func SaveTeamsIDatabase()
+    
+    func saveTeamsIDatabase()
     {
         for team in presenter.teamsArray ?? [] {
             
-            let newObj :TeamDB = TeamDB.GetTeamDBWithTeamObj(team: team)
+            let newObj :TeamDB = TeamDB.getTeamDBWithTeamObj(team: team)
             
-            TeamDB.AddOrUpdateTeam(newObj: newObj)
+            TeamDB.addOrUpdateTeam(newObj: newObj)
             
         }
         print("teams saved in db successfully")
-        let teamsArray  = TeamDB.GetAllTeams() //check if save successfully
+        let teamsArray  = TeamDB.getAllTeams() //check if save successfully
         print(teamsArray.count)
     }
     
-    func OpenTeamDetailsVc(teamId: Int) {
+    func openTeamDetailsVc(teamId: Int) {
         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "TeamDetailsVC") as! TeamDetailsVC
         
         vc.teamID = teamId
@@ -81,7 +82,7 @@ extension HomeVC: TeamView {
         self.present(vc, animated: true, completion: nil)
     }
     
-    func ShowError(error: String) {
+    func showError(error: String) {
         self.showMessage(msg: error, type: .notification)
         tableView.isHidden = true
         

@@ -34,7 +34,7 @@ class TeamDetailsVC: BaseViewController {
         {
             
             // get saved data
-            let detailsObj = TeamDetailsDB.GetTeamDetailsDB(teamID: teamID)
+            let detailsObj = TeamDetailsDB.getTeamDetailsDB(teamID: teamID)
             
             if detailsObj != nil
             {
@@ -78,7 +78,7 @@ class TeamDetailsVC: BaseViewController {
                 
                 presenter.teamsDetailsObj = teamsDetails
                 
-                SetViewData()
+                setViewData()
                 
                 btnTryConnect.isHidden = true
                 tableView.isHidden = false
@@ -105,7 +105,7 @@ class TeamDetailsVC: BaseViewController {
     }
     
     
-    @IBAction func BackAction(_ sender: Any) {
+    @IBAction func backaction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     

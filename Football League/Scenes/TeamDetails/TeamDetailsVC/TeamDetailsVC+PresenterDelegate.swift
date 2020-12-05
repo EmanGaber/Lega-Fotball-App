@@ -10,32 +10,31 @@ import Kingfisher
 import SVGKit
 
 extension TeamDetailsVC: TeamDetailsView {
-   
-    func ShowIndicator() {
+    
+    func showIndicator() {
         self.loading()
     }
     
-    func HideIndicator() {
-       self.killLoading()
+    func hideIndicator() {
+        self.killLoading()
     }
     
-    func FetchingTeamDetailsSuccess() {
-                
-        SetViewData()
-        SaveTeamDetailsInDatabase()
+    func fetchingTeamDetailsSuccess() {
+        setViewData()
+        saveTeamDetailsInDatabase()
     }
     
-    func FetchingTeamDetailsDBSuccess() {
-        SetViewData()
+    func fetchingTeamDetailsDBSuccess() {
+        setViewData()
     }
     
-    func SetViewData()
+    func setViewData()
     {
         tableView.isHidden = false
         lblName.isHidden = false
         teamImg.isHidden = false
         lblPlayerList.isHidden = false
-
+        
         if presenter.teamsDetailsObj?.crestUrl != nil {
             teamImg.downloadedsvg(from:  URL(string: presenter.teamsDetailsObj?.crestUrl ?? "")!)
             
@@ -47,7 +46,7 @@ extension TeamDetailsVC: TeamDetailsView {
         }
         teamDate.text = "\(value)"
         tableView.reloadData()
-
+        
         tableViewHeight.constant = CGFloat((presenter.teamsDetailsObj?.squad!.count)! * 150)
         viewHeight.constant += (tableViewHeight.constant - 543)
         self.view.layoutIfNeeded()
@@ -55,19 +54,19 @@ extension TeamDetailsVC: TeamDetailsView {
     }
     
     
-    func SaveTeamDetailsInDatabase()
+    func saveTeamDetailsInDatabase()
     {
-                   
-        let newObj :TeamDetailsDB = TeamDetailsDB.GetTeamDetailsDBWithTeamDetailsObj(team:  presenter.teamsDetailsObj!)
-            
-        TeamDetailsDB.AddOrUpdateTeamDetails(newObj: newObj)
-                  
-
+        
+        let newObj :TeamDetailsDB = TeamDetailsDB.getTeamDetailsDBWithTeamDetailsObj(team:  presenter.teamsDetailsObj!)
+        
+        TeamDetailsDB.addOrUpdateTeamDetails(newObj: newObj)
+        
+        
     }
     
-    func ShowError(error: String) {
-     self.showMessage(msg: error, type: .notification)
-
+    func showError(error: String) {
+        self.showMessage(msg: error, type: .notification)
+        
         btnTryConnect.isHidden = false
         tableView.isHidden = true
         lblName.isHidden = true
